@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./reset-styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Magic button</title>
-</head>
-<body>
-    <div class="loading-page is-hidden">
-        Робиться все добре...
-    <div class="loader-wrap">
-        <div class="loader"></div>
-    </div>
-    </div>
+  </head>
+  <body>
+    <button class="magic-button" type="button">Здійснити мрії Міші</button>
 
-    <button class="magic-button" type="button">Зробити все добре</button>
-    <svg class="info-icon" width="25" height="25">
-        <use href="./symbol-defs.svg#icon-info"></use>
+    <svg class="info-icon" width="28" height="28">
+      <use href="./symbol-defs.svg#icon-info"></use>
     </svg>
 
     <div class="info-description is-hidden">
-        Кнопка "Зробити все добре" призначена для регудярного покращення життя. Рекомендується для використання спеціалістам різних професій, як в комерційих, так і в особистих цілях.
-    <div class="arrow-down"></div>
+      Кнопка призначена для того, щоб допомогти Міші здійснити всі його мрії чи
+      принаймні просто змусити його посміхнутися😌🙃
+      <div class="arrow-down"></div>
+    </div>
+
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <div class="loading-page">
+          <p class="loading-title">Мрії здійснюються...</p>
+          <div class="loader-wrap">
+            <div class="loader"></div>
+          </div>
+        </div>
+        <div class="result invisible">
+          <h2 class="result-title">Всі мрії здійснені 🥳</h2>
+          <p class="result-description">
+            <span class="result-description-important">P.S.</span> Якщо ще не
+            всі мрії здійснилися, то дайте кнопочці чуть більше часу😌 А за той
+            час допоможіть їй трішки здійснювати ваші мрії😉
+          </p>
+          <button type="button" class="result-button">Добре</button>
+        </div>
+      </div>
     </div>
 
     <script src="./index.js" type="module"></script>
-</body>
+  </body>
 </html>
